@@ -1,5 +1,5 @@
 # BRT-token
-Name - BRIHAT
+Name - BRIHAT  
 Symbol - BRT
 ## DEX Contract  
 This is a decentralized exchange (DEX) smart contract written in Solidity. It allows users to buy and sell tokens at different prices determined by the contract owner.
