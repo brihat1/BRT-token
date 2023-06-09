@@ -45,14 +45,9 @@ async function buy() {
 async function getBp() {
     const input = document.getElementById("bestPriceInput").value;
     const bestPrice = await contractObj.getBestPrice(input);
-    console.log(bestPrice);
-    //document.getElementById("bestPriceValue").innerHTML = bestPrice;
+    document.getElementById("bestPriceValue").innerHTML = bestPrice;
 }
 
-async function getarr() {
-    const arr = await contractObj.getarr();
-    console.log(arr);
-}
 async function getBalance() {
     const address = document.getElementById("getBalance").value;
     console.log(await contractObj.getBalance(address));
