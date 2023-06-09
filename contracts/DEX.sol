@@ -48,8 +48,8 @@ contract DEX{
     }
 
     function buy(uint _tokens) public payable{
-        uint _bestPrice = 12;   // getting best price available
-        uint _payableAmount = _bestPrice*_tokens;
+        uint _bestPrice = getBestPrice(_tokens);   // getting best price available
+        uint _payableAmount = _bestPrice * c_tokens;
         require(msg.value >= _payableAmount, "not enough eth sent");
         address from = sellingPrices[_bestPrice];
         token.transferFrom(from, msg.sender, _tokens);
