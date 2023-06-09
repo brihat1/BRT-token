@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DEX - Crypto Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>BRT DEX</h1>
+            </div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Exchange</a></li>
+                <li><a href="#">Wallet</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Trade BRT with Ease</h2>
+            <p>Discover the best prices, buy, and sell BRT with our decentralized exchange.</p>
+        </div>
+    </section>
+
+    <section class="exchange">
+        <div class="container">
+            <h2>Buy and Sell BRT Token</h2>
+            <div class="input-group">
+                <input type="number" id="sellAmountInput" placeholder="Enter amount to sell">
+                <input type="number" id="priceInput" placeholder="Enter price at which to sell">
+                <button id="sellButton" class="cta-button" onclick="sell()">Sell</button>
+                <p id="sellSuccessful"></p>
+            </div>
+            <div class="input-group">
+                <input type="number" id="buyAmountInput" placeholder="Enter amount to buy">
+                <button id="buyButton" class="cta-button" onclick="buy()">Buy</button>
+            </div>
+            <input type="number" id="bestPriceInput" placeholder="Enter number of tokens to buy">
+            <button id="bestPriceButton" class="cta-button" onclick="getBp()">Get Best Price</button>
+            <div id="bestPriceDisplay" class="price-display">Best Price: <span id="bestPriceValue"></span></div>
+            <button onclick="getarr()">getarr</button>
+            <div>
+                <input type="text" id="getBalance">
+                <button onclick="getBalance()"></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 BRT DEX. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
